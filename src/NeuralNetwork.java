@@ -28,8 +28,11 @@ class NeuralNetwork {
             layers[i] = new Layer(sizes[i], nextSize);
 
             for (int j = 0; j < sizes[i]; j++) {
+
                 layers[i].biases[j] = Math.random() * 2.0 - 1.0;
+
                 for (int k = 0; k < nextSize; k++) {
+
                     layers[i].weights[j][k] = Math.random() * 2.0 - 1.0;
                 }
             }
